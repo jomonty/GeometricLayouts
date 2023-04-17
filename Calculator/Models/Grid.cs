@@ -4,16 +4,16 @@
     {
         public int Height { get; }
         public int Width { get; }
-        public int SquareSize { get; }
+        public int gridSquareSideLength { get; }
 
 
 
 
-        public Grid(int height, int width, int gridSquareWidth)
+        public Grid(int height, int width, int gridSquareSideLength)
         {
             this.Height = height;
             this.Width = width;
-            this.SquareSize = gridSquareWidth;
+            this.gridSquareSideLength = gridSquareSideLength;
         }
     }
 }

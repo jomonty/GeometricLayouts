@@ -4,7 +4,7 @@ namespace Calculator.Calculators
 {
     public static class GridRefCalculator
     {
-        private static Triangle FindVerticesByGridRef(Grid grid, GridRef gridRef)
+        public static Triangle FindVerticesByGridRef(Grid grid, GridRef gridRef)
         {
 
         }

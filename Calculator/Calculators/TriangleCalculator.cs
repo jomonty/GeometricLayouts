@@ -1,4 +1,5 @@
 ﻿using Calculator.Models;
+using Calculator.Utilities;
 
 namespace Calculator.Calculators
 {
@@ -16,6 +17,11 @@ namespace Calculator.Calculators
             VertexCoord rightAngleCoord = CalculateRightAngleCoord(gridRef, bottomRightCoord, grid.gridSquareSideLength);
 
             Triangle result = new Triangle(topLeftCoord, bottomRightCoord, rightAngleCoord);
+
+            if (!CheckCalculatorValidity.CheckTriangle(grid, result))
+            {
+                throw new Exception("Grid Ref invalid for supplied grid.");
+            }
 
             return result;
         }

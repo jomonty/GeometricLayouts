@@ -1,11 +1,13 @@
-﻿namespace Calculator.Models
+﻿using System.Text.Json.Serialization;
+
+namespace Calculator.Models
 {
     public class GridRef
     {
         public string StrRef { get; set; }
         public char Row { get; }
         public int Col { get; }
-        
+
         public GridRef(string strRef)
         {
             // Construct from string GridRef of form "A1", "F12",

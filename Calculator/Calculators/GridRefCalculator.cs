@@ -1,5 +1,5 @@
 ﻿using Calculator.Models;
-using System.Collections.Immutable;
+using Calculator.Utilities;
 
 namespace Calculator.Calculators
 {
@@ -7,6 +7,10 @@ namespace Calculator.Calculators
     {
         public static GridRef FindGridRefByTriange(Grid grid, Triangle triangle)
         {
+            if (!CheckCalculatorValidity.CheckTriangle(grid, triangle))
+            {
+                throw new Exception("Triangle vertices invalid for supplied grid.");
+            }
             /*  Assumption - vertex coordinates may be passed in any order to the triangle constructor.
              *  Given that, this method seeks to derive grid reference based on vertex coords alone,
              *  without context on where each is positioned on the triangle.
@@ -42,5 +46,7 @@ namespace Calculator.Calculators
             // Create and return GridRef
             return new GridRef(rowRef, colRef);
         }
+
+        
     }
 }

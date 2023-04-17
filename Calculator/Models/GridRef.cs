@@ -21,7 +21,7 @@
             // parse to string representation
             this.Row = row;
             this.Col = col;
-            this.StrRef = String.Format(this.Row.ToString(), this.Col);
+            this.StrRef = row.ToString() + col.ToString();
         }
     }
 }

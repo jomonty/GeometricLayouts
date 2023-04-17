@@ -23,6 +23,7 @@ namespace Calculator.Calculators
 
             /*  Number part of grid reference (col), determined by
              *  (sum(x coordinates) - min(x coordinate)) / length of a grid side square
+             *  This can be interpreted as 
              */
             int sumXCoords = triangle.vertex1.X + triangle.vertex2.X + triangle.vertex3.X;
             int minXCoord = Math.Min(triangle.vertex1.X, Math.Min(triangle.vertex2.X, triangle.vertex3.X));

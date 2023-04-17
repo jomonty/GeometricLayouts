@@ -3,14 +3,15 @@ using Calculator.Models;
 
 namespace Tests.CalculatorTests
 {
-    public class TriangleCalculatorTest
+    public class TriangleCalculatorTestStandardGrid
     {
+        Grid grid = new Grid(60, 60, 10);
+
         [Fact]
         public void CanGetTriangleFromGridRef1()
         {
             // Arrange
             GridRef gridRef = new GridRef("A1");
-            Grid grid = new Grid(60, 60, 10);
 
             // Act
             Triangle result = TriangleCalculator.FindVerticesByGridRef(grid, gridRef);
@@ -29,7 +30,6 @@ namespace Tests.CalculatorTests
         {
             // Arrange
             GridRef gridRef = new GridRef("B12");
-            Grid grid = new Grid(60, 60, 10);
 
             // Act
             Triangle result = TriangleCalculator.FindVerticesByGridRef(grid, gridRef);
@@ -48,7 +48,6 @@ namespace Tests.CalculatorTests
         {
             // Arrange
             GridRef gridRef = new GridRef("D4");
-            Grid grid = new Grid(60, 60, 10);
 
             // Act
             Triangle result = TriangleCalculator.FindVerticesByGridRef(grid, gridRef);
@@ -67,7 +66,6 @@ namespace Tests.CalculatorTests
         {
             // Arrange
             GridRef gridRef = new GridRef("F9");
-            Grid grid = new Grid(60, 60, 10);
 
             // Act
             Triangle result = TriangleCalculator.FindVerticesByGridRef(grid, gridRef);

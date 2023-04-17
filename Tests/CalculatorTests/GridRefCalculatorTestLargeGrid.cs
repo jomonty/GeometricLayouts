@@ -3,82 +3,80 @@ using Calculator.Models;
 
 namespace Tests.CalculatorTests
 {
-    public class GridRefCalculatorTest
+    public class GridRefCalculatorTestLargeGrid
     {
+        Grid grid = new Grid(120, 120, 6);
+
         [Fact]
         public void CanGetGridRefFromTriangle1()
         {
             // Arrange
-            Grid grid = new Grid(60, 60, 10);
             Triangle triangle = new Triangle
             (
-                new VertexCoord(0, 0),
-                new VertexCoord(10, 10),
-                new VertexCoord(10, 0)
+                new VertexCoord(66, 60),
+                new VertexCoord(72, 66),
+                new VertexCoord(72, 60)
             );
 
             // Act
             GridRef result = GridRefCalculator.FindGridRefByTriange(grid, triangle);
 
             // Assert
-            Assert.Equal("A2", result.StrRef);
+            Assert.Equal("K24", result.StrRef);
         }
 
         [Fact]
         public void CanGetGridRefFromTriangle2()
         {
             // Arrange
-            Grid grid = new Grid(60, 60, 10);
             Triangle triangle = new Triangle
             (
-                new VertexCoord(50, 10),
-                new VertexCoord(60, 20),
-                new VertexCoord(50, 20)
+                new VertexCoord(30, 48),
+                new VertexCoord(36, 54),
+                new VertexCoord(30, 54)
             );
 
             // Act
             GridRef result = GridRefCalculator.FindGridRefByTriange(grid, triangle);
 
             // Assert
-            Assert.Equal("B11", result.StrRef);
+            Assert.Equal("I11", result.StrRef);
         }
 
         [Fact]
         public void CanGetGridRefFromTriangle3()
         {
             // Arrange
-            Grid grid = new Grid(60, 60, 10);
             Triangle triangle = new Triangle
             (
-                new VertexCoord(10, 30),
-                new VertexCoord(20, 40),
-                new VertexCoord(10, 40)
+                new VertexCoord(114, 108),
+                new VertexCoord(120, 114),
+                new VertexCoord(114, 114)
             );
 
             // Act
             GridRef result = GridRefCalculator.FindGridRefByTriange(grid, triangle);
 
             // Assert
-            Assert.Equal("D3", result.StrRef);
+            Assert.Equal("S39", result.StrRef);
         }
 
         [Fact]
         public void CanGetGridRefFromTriangle4()
         {
             // Arrange
-            Grid grid = new Grid(60, 60, 10);
             Triangle triangle = new Triangle
             (
-                new VertexCoord(40, 50),
-                new VertexCoord(50, 60),
-                new VertexCoord(50, 50)
+                new VertexCoord(36, 24),
+                new VertexCoord(42, 30),
+                new VertexCoord(36, 30)
             );
 
             // Act
             GridRef result = GridRefCalculator.FindGridRefByTriange(grid, triangle);
 
             // Assert
-            Assert.Equal("F10", result.StrRef);
+            Assert.Equal("E13", result.StrRef);
         }
 
     }

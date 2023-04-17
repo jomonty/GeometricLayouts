@@ -6,8 +6,6 @@
         public VertexCoord? vertex2 { get; set;}
         public VertexCoord? vertex3 { get; set;}
 
-        public Triangle() { }
-
         public Triangle(VertexCoord vertex1, VertexCoord vertex2, VertexCoord vertex3)
         {
             this.vertex1 = vertex1;

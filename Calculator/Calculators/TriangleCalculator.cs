@@ -2,7 +2,7 @@
 
 namespace Calculator.Calculators
 {
-    public static class GridRefCalculator
+    public static class TriangleCalculator
     {
         public static Triangle FindVerticesByGridRef(Grid grid, GridRef gridRef)
         {
@@ -23,9 +23,8 @@ namespace Calculator.Calculators
         private static VertexCoord CalculateTopLeftCoord(GridRef gridRef, int gridSquareSideLength)
         {
             // Find integer grid column, starting at 0 from left
-            // ColNumber = Floor((gridRefCol - 1)/2)
-            double unFlooredCol = (gridRef.Col - 1) / 2;
-            int intCol = (int)Math.Floor(unFlooredCol);
+            // ColNumber = Floor((gridRefCol - 1)/2), declaring as int floors the sum result
+            int intCol = (gridRef.Col - 1) / 2;
 
             // Find integer grid row, starting at 0 from top
             // ASCII value of row reference, subtract 65 so A=0, B=1, C=2 etc

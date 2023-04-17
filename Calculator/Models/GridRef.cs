@@ -8,11 +8,20 @@
         
         public GridRef(string strRef)
         {
-            // Parse string GridRef of form "A1", "F12" to
-            // respective char (row) and int (col) representations
+            // Construct from string GridRef of form "A1", "F12",
+            // parse to respective char (row) and int (col) representations
             this.StrRef = strRef;
             this.Row = char.Parse(strRef.Substring(0, 1).ToUpper());
             this.Col = int.Parse(strRef.Substring(1));
+        }
+
+        public GridRef(char row, int col)
+        {
+            // Parse from char row and int col references,
+            // parse to string representation
+            this.Row = row;
+            this.Col = col;
+            this.StrRef = String.Format(this.Row.ToString(), this.Col);
         }
     }
 }

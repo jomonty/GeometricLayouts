@@ -3,10 +3,8 @@ using Calculator.Models;
 
 namespace Tests
 {
-    public class GridReferenceCalculatorTest
+    public class TriangleCalculatorTest
     {
-
-        
         [Fact]
         public void CanGetTriangleFromGridRef1()
         {

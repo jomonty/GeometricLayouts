@@ -23,7 +23,17 @@ namespace Calculator.Calculators
 
             /*  Number part of grid reference (col), determined by
              *  (sum(x coordinates) - min(x coordinate)) / length of a grid side square
-             *  This can be interpreted as 
+             *      There are 2x as many column references as 'columns' of squares
+             *      So this is a method of identifying which sub-column we need by the number of x coords
+             *      on either side of the main column.
+             *      eg. 
+             *          For triangle D7 in a grid 60 x 60 with grid square length of 10,
+             *          we have x coords of 30, 40, 30.
+             *          (100 - 30) = 70, dividing by the grid square length of 10 gives 7.
+             *          
+             *          For triangle S39 in a grid 120 x 120 with grid square length of 6
+             *          we have x coords of 114, 120, 114.
+             *          (348 - 114) = 234, so dividing by the grid square length of 6 gives 39.
              */
             int sumXCoords = triangle.vertex1.X + triangle.vertex2.X + triangle.vertex3.X;
             int minXCoord = Math.Min(triangle.vertex1.X, Math.Min(triangle.vertex2.X, triangle.vertex3.X));

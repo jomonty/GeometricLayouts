@@ -6,7 +6,7 @@ namespace Calculator.Calculators
     {
         public static Triangle FindVerticesByGridRef(Grid grid, GridRef gridRef)
         {
-            /*  Approach find triangle vertices by grid reference is as follows:
+            /*  Approach to find triangle vertices by grid reference is as follows:
              *  1. Find the top left vertex coordinates of a triangle by it's grid ref
              *  2. Navigate down the hypotenuse to find the bottom right vertex coordinates
              *  3. Decide if it's a 'top' or 'bottom' triangle to find the vertex coords of the right angle

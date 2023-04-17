@@ -1,7 +1,7 @@
 ﻿using Calculator.Calculators;
 using Calculator.Models;
 
-namespace Tests
+namespace Tests.CalculatorTests
 {
     public class GridRefCalculatorTest
     {

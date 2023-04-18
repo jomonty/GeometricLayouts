@@ -35,6 +35,15 @@ namespace Calculator.Utilities
             if (Area != checkArea) { isValid = false; };
 
             // Check triangle hypotenuse is in correct direction
+            float gradient1 = (triangle.vertex1.X - triangle.vertex2.X) != 0 ?
+                (triangle.vertex1.Y - triangle.vertex2.Y) / (triangle.vertex1.X - triangle.vertex2.X) : 0;
+            float gradient2 = (triangle.vertex1.X - triangle.vertex2.X) != 0 ? 
+                (triangle.vertex1.Y - triangle.vertex3.Y) / (triangle.vertex1.X - triangle.vertex2.X) : 0;
+            float gradient3 = (triangle.vertex2.X - triangle.vertex3.X) != 0 ? 
+                (triangle.vertex2.Y - triangle.vertex3.Y) / (triangle.vertex2.X - triangle.vertex3.X) : 0;
+
+            if (gradient1 == -1 ||  gradient2 == -1 || gradient3 == -1) { isValid = false; }
+
  
 
             return isValid;

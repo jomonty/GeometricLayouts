@@ -11,7 +11,7 @@ namespace API.Controllers
     {
         [HttpPost("verticesbygridref")]
         [Produces("application/json")]
-        public ActionResult VerticesByGridRef([FromBody] VerticesByGridRefRequestEntity request)
+        public ActionResult<Triangle> VerticesByGridRef([FromBody] VerticesByGridRefRequestEntity request)
         {
             if (!ModelState.IsValid)
             {
@@ -35,7 +35,7 @@ namespace API.Controllers
 
         [HttpPost("gridrefbyvertices")]
         [Produces("application/json")]
-        public ActionResult GridRefByVertices([FromBody] GridRefByVerticesRequestEntity request)
+        public ActionResult<GridRef> GridRefByVertices([FromBody] GridRefByVerticesRequestEntity request)
         {
             if (!ModelState.IsValid)
             {

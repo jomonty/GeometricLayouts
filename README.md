@@ -24,7 +24,7 @@ This project was created as part of a technical challenge, the counterpart front
 ### To use
 Available endpoints are 
    * localhost:5209/api/geometry/verticesbygridref
-     * Request:
+     * Example request:
      
        ```json
        {
@@ -34,7 +34,7 @@ Available endpoints are
          "gridSquareSideLength": 10
        }
        ```
-      * Response:
+      * Example response:
         ```json
         {
           "vertex1": {
@@ -52,7 +52,7 @@ Available endpoints are
          }
         ```
    * localhost:5209/api/geometry/gridrefbyvertices
-     * Request:
+     * Example request:
      
        ```json
        {
@@ -73,7 +73,7 @@ Available endpoints are
           "gridSquareSideLength": 10
        }
        ```
-      * Response:
+      * Example response:
         ```json
         {
           "strRef": "E7",

@@ -1,7 +1,7 @@
 # GeometricLayouts
 
 ## Summary
-This project was created as part of a technical challenge, the counterpart frontend is available [here](https://github.com/jomonty/GeometricLayouts-Frontend) and the website is also [hosted](https://geometric-layouts-frontend.vercel.app). I decided to attempt to make the calculator agnostic of grid size, which had a few challenges but I enjoyed working through them and getting familiar with C#. 
+This project as a solution to the question posed below, the counterpart frontend is available [here](https://github.com/jomonty/GeometricLayouts-Frontend) and the website is also [hosted](https://geometric-layouts-frontend.vercel.app). I decided to attempt to make the process agnostic of grid size, which had a few challenges but I enjoyed working through them and getting familiar with C#. 
 <br>
 <br>
 

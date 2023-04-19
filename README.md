@@ -23,7 +23,7 @@ This project was created as part of a technical challenge, the counterpart front
 
 ### To use
 Available endpoints are 
-   * localhost:5209/api/geometry/verticesbygridref.
+   * localhost:5209/api/geometry/verticesbygridref
      * Request:
      
        ```json
